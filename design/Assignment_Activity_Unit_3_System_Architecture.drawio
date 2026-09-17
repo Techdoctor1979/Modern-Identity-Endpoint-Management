@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" modified="2026-09-14T12:00:00.000Z" agent="Mozilla/5.0" version="24.7.17" type="device">
+  <diagram id="identity-endpoint-architecture" name="Architecture">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Assignment Activity Unit 3 System Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=24;fontStyle=1;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="180" y="20" width="1180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="Solid connectors show operational flows. Dashed connectors show temporary transition paths or evaluated alternatives." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Arial;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="250" y="62" width="1040" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="users" value="&lt;b&gt;Users and Endpoints&lt;/b&gt;&lt;br&gt;&lt;br&gt;Employees and administrators&lt;br&gt;Windows 10/11&lt;br&gt;macOS, iOS, and iPadOS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#000000;fontFamily=Arial;fontSize=12;arcSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="150" width="220" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="entra" value="&lt;b&gt;Microsoft Entra ID&lt;/b&gt;&lt;br&gt;&lt;br&gt;Cloud identity, groups, tokens,&lt;br&gt;roles, MFA, and lifecycle controls" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#000000;fontFamily=Arial;fontSize=12;arcSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="330" y="150" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="conditional" value="&lt;b&gt;Conditional Access&lt;/b&gt;&lt;br&gt;&lt;br&gt;Evaluates identity, application,&lt;br&gt;device compliance, and sign-in context" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#000000;fontFamily=Arial;fontSize=12;arcSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="910" y="150" width="230" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="resources" value="&lt;b&gt;Organizational Resources&lt;/b&gt;&lt;br&gt;&lt;br&gt;Microsoft 365&lt;br&gt;Cloud applications&lt;br&gt;Approved on-premises and legacy resources" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#000000;fontFamily=Arial;fontSize=12;arcSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="150" width="230" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ad" value="&lt;b&gt;On-Premises AD&lt;/b&gt;&lt;br&gt;&lt;br&gt;Existing identities, groups,&lt;br&gt;legacy applications, and policies" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#000000;fontFamily=Arial;fontSize=12;arcSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="220" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="enrollment" value="&lt;b&gt;Enrollment Services&lt;/b&gt;&lt;br&gt;&lt;br&gt;Windows enrollment / Company Portal&lt;br&gt;Apple Business Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#000000;fontFamily=Arial;fontSize=12;arcSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="330" y="390" width="230" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="mdm" value="&lt;b&gt;Endpoint Management&lt;/b&gt;&lt;br&gt;&lt;br&gt;Intune baseline candidate&lt;br&gt;Addigy evaluated as an Apple&lt;br&gt;alternative or supplement" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#000000;fontFamily=Arial;fontSize=12;arcSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="620" y="390" width="230" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="compliance" value="&lt;b&gt;Compliance and Configuration&lt;/b&gt;&lt;br&gt;&lt;br&gt;Encryption, OS versions, updates,&lt;br&gt;restrictions, applications, and remediation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#000000;fontFamily=Arial;fontSize=12;arcSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="910" y="390" width="230" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="governance" value="&lt;b&gt;Governance, Monitoring, and Support&lt;/b&gt;&lt;br&gt;&lt;br&gt;RBAC and separation of duties | audit and sign-in logs | privacy and retention&lt;br&gt;alerts and reporting | service desk | exception and recovery processes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#000000;fontFamily=Arial;fontSize=12;arcSize=10;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="330" y="610" width="810" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="principles" value="&lt;b&gt;Core design principles&lt;/b&gt;&lt;br&gt;Verify explicitly | use least privilege | assume breach | minimize PII | test before enforcement&lt;br&gt;Document exceptions | preserve recovery and rollback | retire hybrid dependencies only after validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;fontFamily=Arial;fontSize=12;arcSize=6;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="180" y="760" width="1110" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e-signin" value="Sign-in" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="users" target="entra"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-identity" value="Identity signals" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="entra" target="conditional"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-resource" value="Grant / block" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="conditional" target="resources"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-sync" value="Directory sync" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="ad" target="entra"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-enroll" value="Enrollment" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="users" target="enrollment"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-register" value="Registration" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="enrollment" target="mdm"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-policy" value="Policies and status" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="mdm" target="compliance"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-compliance" value="Compliance" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontFamily=Arial;fontSize=11;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="compliance" target="conditional"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-idlogs" value="Identity logs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="entra" target="governance"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-devlogs" value="Device events" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="mdm" target="governance"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e-accesslogs" value="Access events" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;fontFamily=Arial;fontSize=10;fontColor=#000000;strokeColor=#000000;" edge="1" parent="1" source="conditional" target="governance"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
