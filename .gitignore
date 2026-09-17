@@ -1,0 +1,15 @@
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+*.token
+secrets/
+credentials/
+raw-evidence/
+production-exports/
+*.docx
+*.pdf
+~$*
