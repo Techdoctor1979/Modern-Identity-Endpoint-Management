@@ -15,3 +15,13 @@ Testing will use nonproduction accounts, representative devices, staged policies
 | TC-09 | FR-10, NFR-03 | Review access-denial and remediation information. | User-facing message and support procedure review. |
 
 Each test record must identify the date, environment, tester, expected result, observed result, evidence location, limitation, and final status.
+
+## Control Effectiveness Review
+
+After the pilot, the review will consider whether the security and privacy controls work as intended without creating unnecessary problems for users or support staff.
+
+- Security operation: Review MFA registration and sign-in success, device-compliance results, enrollment failures, Conditional Access decisions, approved exceptions, and policy-related lockouts.
+- User impact: Review help-desk requests, repeated access denials, remediation results, and other signs that a control may be difficult to use or support.
+- Privacy: Confirm that only necessary identity and device information is collected, access is restricted, retention requirements are followed, and users receive clear notice about device management.
+
+The findings will be recorded with the related requirement and test evidence so that controls can be adjusted before wider deployment.
