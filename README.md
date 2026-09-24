@@ -45,7 +45,7 @@ See [Version Control and Traceability](docs/version-control-overview.md) for the
 
 ## Current status
 
-The problem definition, critical literature analysis, architecture, module design, functional and nonfunctional requirements, risk review, and version-control structure are complete. Proof-of-concept configuration and testing are the next milestones. Vendor documentation will be distinguished from functions observed directly during testing.
+The problem definition, critical literature analysis, architecture, module design, functional and nonfunctional requirements, risk review, and version-control structure are complete. The Unit 4 local browser prototype now demonstrates identity access decisions, endpoint compliance evaluation, and session-only decision logging with sample data. Authorized tenant configuration and vendor-specific testing remain future milestones, and vendor documentation will be distinguished from functions observed directly during testing.
 
 ## Security and privacy
 
