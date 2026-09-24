@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Identity and Endpoint Management Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">MSIT 5910 Capstone Project</p>
+      <h1>Identity and Endpoint Management Prototype</h1>
+      <p class="subtitle">Nonproduction proof of concept for access and device compliance decisions</p>
+    </div>
+    <div class="status-badge">LOCAL DEMO</div>
+  </header>
+
+  <main>
+    <section class="notice" aria-label="Prototype notice">
+      <strong>Demonstration environment:</strong> This prototype uses sample data and does not connect to Microsoft Entra ID, Intune, Apple Business Manager, Addigy, or a production directory.
+    </section>
+
+    <nav class="feature-nav" aria-label="Prototype features">
+      <button class="nav-button active" data-panel="access-panel">Identity access evaluation</button>
+      <button class="nav-button" data-panel="compliance-panel">Endpoint compliance evaluation</button>
+      <button class="nav-button" data-panel="activity-panel">Decision log</button>
+    </nav>
+
+    <section id="access-panel" class="feature-panel active" aria-labelledby="access-heading">
+      <div class="panel-heading">
+        <div>
+          <p class="module-label">Modules M2 and M5</p>
+          <h2 id="access-heading">Identity access evaluation</h2>
+          <p>Evaluate a sample sign-in using account, authentication, device, and risk conditions.</p>
+        </div>
+        <button id="load-access-demo" class="secondary-button">Load blocked-access example</button>
+      </div>
+
+      <form id="access-form" class="input-grid">
+        <label>Account status
+          <select id="account-status">
+            <option value="active">Active</option>
+            <option value="disabled">Disabled</option>
+          </select>
+        </label>
+        <label>User role
+          <select id="user-role">
+            <option value="standard">Standard user</option>
+            <option value="administrator">Administrator</option>
+          </select>
+        </label>
+        <label>MFA status
+          <select id="mfa-status">
+            <option value="complete">Completed</option>
+            <option value="missing">Not completed</option>
+          </select>
+        </label>
+        <label>Device status
+          <select id="access-device-status">
+            <option value="compliant">Compliant</option>
+            <option value="noncompliant">Noncompliant</option>
+            <option value="unknown">Unknown</option>
+          </select>
+        </label>
+        <label>Sign-in risk
+          <select id="sign-in-risk">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </label>
+        <label>Requested resource
+          <select id="resource">
+            <option value="email">Organizational email</option>
+            <option value="files">Shared files</option>
+            <option value="admin">Administrative portal</option>
+          </select>
+        </label>
+        <button type="submit" class="primary-button">Evaluate access</button>
+      </form>
+
+      <div id="access-result" class="result neutral" aria-live="polite">
+        <h3>No decision yet</h3>
+        <p>Select the conditions and evaluate the request.</p>
+      </div>
+    </section>
+
+    <section id="compliance-panel" class="feature-panel" aria-labelledby="compliance-heading">
+      <div class="panel-heading">
+        <div>
+          <p class="module-label">Modules M3 and M4</p>
+          <h2 id="compliance-heading">Endpoint compliance evaluation</h2>
+          <p>Check whether a sample Windows or Apple endpoint meets the proposed baseline.</p>
+        </div>
+        <button id="load-compliance-demo" class="secondary-button">Load noncompliant example</button>
+      </div>
+
+      <form id="compliance-form" class="input-grid">
+        <label>Platform
+          <select id="platform">
+            <option value="Windows">Windows</option>
+            <option value="macOS">macOS</option>
+            <option value="iOS">iOS</option>
+            <option value="iPadOS">iPadOS</option>
+          </select>
+        </label>
+        <label>Management status
+          <select id="managed-status">
+            <option value="managed">Managed</option>
+            <option value="unmanaged">Unmanaged</option>
+          </select>
+        </label>
+        <label>Encryption
+          <select id="encryption-status">
+            <option value="enabled">Enabled</option>
+            <option value="disabled">Disabled</option>
+          </select>
+        </label>
+        <label>Screen lock
+          <select id="screen-lock-status">
+            <option value="enabled">Enabled</option>
+            <option value="disabled">Disabled</option>
+          </select>
+        </label>
+        <label>Operating system
+          <select id="os-status">
+            <option value="supported">Supported version</option>
+            <option value="unsupported">Unsupported version</option>
+          </select>
+        </label>
+        <label>Security updates
+          <select id="update-status">
+            <option value="current">Current</option>
+            <option value="overdue">Overdue</option>
+          </select>
+        </label>
+        <button type="submit" class="primary-button">Evaluate compliance</button>
+      </form>
+
+      <div id="compliance-result" class="result neutral" aria-live="polite">
+        <h3>No evaluation yet</h3>
+        <p>Select the endpoint conditions and run the compliance check.</p>
+      </div>
+    </section>
+
+    <section id="activity-panel" class="feature-panel" aria-labelledby="activity-heading">
+      <div class="panel-heading">
+        <div>
+          <p class="module-label">Module M6</p>
+          <h2 id="activity-heading">Decision log</h2>
+          <p>Review decisions produced during this browser session.</p>
+        </div>
+        <button id="clear-log" class="secondary-button">Clear log</button>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Feature</th>
+              <th>Decision</th>
+              <th>Summary</th>
+            </tr>
+          </thead>
+          <tbody id="activity-log">
+            <tr class="empty-row"><td colspan="4">No decisions have been recorded.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Requirements demonstrated: FR-01, FR-02, FR-04, FR-05, FR-07, FR-10</span>
+    <span>Author: Dennis Morales</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
