@@ -16,6 +16,10 @@ Testing will use nonproduction accounts, representative devices, staged policies
 
 Each test record must identify the date, environment, tester, expected result, observed result, evidence location, limitation, and final status.
 
+## Unit-Level Automated Tests
+
+The Unit 5 policy module uses `UT-01` through `UT-16` for isolated automated tests. These unit-test identifiers are documented in `unit5-core-logic-and-testing.md` and do not replace the broader `TC-01` through `TC-09` proof-of-concept test cases above.
+
 ## Control Effectiveness Review
 
 After the pilot, the review will consider whether the security and privacy controls work as intended without creating unnecessary problems for users or support staff.

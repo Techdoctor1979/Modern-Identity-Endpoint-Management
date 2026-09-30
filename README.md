@@ -2,7 +2,7 @@
 
 This repository supports an MSIT capstone project that evaluates how an organization can move from traditional on-premises Microsoft Active Directory toward cloud-based identity and endpoint management while continuing to support Windows, macOS, iOS, and iPadOS devices.
 
-The proposed design uses Microsoft Entra ID and Microsoft Intune as baseline candidates. Apple Business Manager provides organizational Apple enrollment, while Addigy is evaluated as an Apple-focused alternative or supplement. The final recommendation will be based on the same documented requirements, test evidence, security and privacy considerations, operational effort, and cost for each option.
+The current baseline uses Microsoft Entra ID for identity and access and Microsoft Intune for Windows, macOS, iOS, and iPadOS management. Apple Business Manager provides organizational assignment, automated enrollment, and application licensing for company-owned Apple devices. Addigy was reviewed as an Apple-focused option, but it is not required in the current baseline. I will reconsider it only if later authorized testing identifies an Apple requirement that Intune cannot meet at an acceptable operational or licensing cost.
 
 ## Research gap and design response
 
@@ -14,7 +14,7 @@ The proposed system addresses that gap by connecting identity lifecycle, authent
 
 - Document identity, endpoint, security, privacy, compatibility, support, and cost requirements.
 - Define the proposed architecture and the interactions among its components.
-- Compare Intune and Addigy against the same Apple-management outcomes.
+- Verify the required Apple-management outcomes through Intune and Apple Business Manager and document any remaining gaps.
 - Test representative authentication, enrollment, configuration, compliance, and access scenarios.
 - Produce a migration roadmap with dependencies, risks, rollback steps, and hybrid exit criteria.
 
@@ -45,7 +45,7 @@ See [Version Control and Traceability](docs/version-control-overview.md) for the
 
 ## Current status
 
-The problem definition, critical literature analysis, architecture, module design, functional and nonfunctional requirements, risk review, and version-control structure are complete. The Unit 4 local browser prototype now demonstrates identity access decisions, endpoint compliance evaluation, and session-only decision logging with sample data. Authorized tenant configuration and vendor-specific testing remain future milestones, and vendor documentation will be distinguished from functions observed directly during testing.
+The problem definition, literature analysis, architecture, module design, requirements, risk review, and version-control structure are complete. The Unit 4 browser prototype demonstrates identity access decisions, endpoint compliance evaluation, and session-only decision logging with sample data. Unit 5 separates the rules into testable functions and adds 16 automated tests with coverage reporting. The working platform baseline is now Entra ID, Intune, and Apple Business Manager. Authorized tenant configuration and vendor-specific testing remain later milestones, and the project will continue to distinguish documented capabilities from behavior observed directly during testing.
 
 ## Security and privacy
 
