@@ -1,0 +1,23 @@
+name: Unit Tests
+
+on:
+  push:
+    branches: [main, development]
+  pull_request:
+    branches: [main, development]
+
+jobs:
+  policy-tests:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/unit4-prototype
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run unit tests with coverage
+        run: npm run test:coverage

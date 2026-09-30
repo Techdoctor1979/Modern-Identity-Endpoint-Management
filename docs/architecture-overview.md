@@ -4,6 +4,10 @@ The proposed architecture begins with the user and the requested organizational 
 
 Microsoft Intune is the baseline endpoint-management candidate because it can connect compliance results directly to Entra Conditional Access and manage Windows and Apple platforms. Apple Business Manager supports organizational ownership and automated Apple enrollment. Addigy is evaluated against the same Apple enrollment, configuration, compliance, monitoring, recovery, privacy, and support requirements. The evaluation may support Intune alone or a justified combination, but the architecture does not assume the result before testing.
 
+## Unit 5 Platform Direction
+
+The Unit 3 design treated Intune and Addigy as options that required comparison. The working baseline now uses Intune for Windows and Apple endpoint management and Apple Business Manager for organizational assignment, automated enrollment, and application licensing. Addigy is not a required component. It remains a contingency if later authorized testing documents an Apple-specific gap that Intune cannot adequately address.
+
 Active Directory synchronization and legacy-resource connections appear as temporary transition paths. Each retained dependency must have an owner, remediation method, test, target date, and exit criterion. Governance, monitoring, privacy, user support, exception review, emergency access, and rollback apply across the design rather than belonging to one product.
 
 The editable architecture is stored in `design/Assignment_Activity_Unit_3_System_Architecture.drawio`, with a PNG preview in the same folder.
