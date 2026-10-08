@@ -20,6 +20,14 @@ I moved the policy rules out of the browser event handlers and into separate Jav
 
 The current platform baseline uses Microsoft Entra ID, Microsoft Intune, and Apple Business Manager. Addigy was considered because of its Apple-management focus and my prior experience with it, but the current requirements do not justify another MDM platform. I will revisit that decision only if authorized testing identifies an Apple requirement that Intune cannot meet.
 
+## Assignment Activity Unit 6
+
+I connected the browser interface, controller, policy functions, result panels, and temporary decision log into one traceable workflow. The Unit 5 automated suite was rerun as a regression baseline, and all 16 tests passed with 100 percent line and function coverage and 96.97 percent branch coverage.
+
+The Unit 6 evaluation adds a requirement-to-evidence table, a repeatable local benchmark, a performance chart, and a six-criterion usability review. The benchmark is limited to the local JavaScript policy functions and is not presented as production-capacity evidence. The usability review identified remediation guidance and error recovery as the clearest improvement areas.
+
+The proposed nonproduction deployment uses Docker and Nginx so the application files and server configuration can be versioned together. The configuration includes a health check, basic browser-security headers, nonsecret example settings, and rollback guidance. This remains a deployment plan; no production deployment or live vendor integration is claimed.
+
 ## Current limitations
 
-Available licenses, representative devices, permissions, and Apple enrollment services may limit testing. Any unsupported test will be recorded as `Not tested` with the reason. Repository evidence must remain anonymized and free of credentials, production data, and unnecessary personal information.
+Available licenses, representative devices, permissions, and Apple enrollment services may limit testing. Any unsupported test will be recorded as `Not tested` with the reason. Repository evidence must remain anonymized and free of credentials, production data, and unnecessary personal information. Later testing should add the remaining branch case, accessibility review, representative-user evaluation, end-to-end timing, and authorized platform evidence where access permits.
