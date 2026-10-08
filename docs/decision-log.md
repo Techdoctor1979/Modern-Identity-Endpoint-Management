@@ -11,5 +11,7 @@
 | ADR-007 | Proposed | Minimize PII in testing and repository evidence. | Identity and endpoint records can contain names, usernames, device identifiers, IP addresses, sign-in records, and compliance results. |
 | ADR-008 | Proposed | Use standards to define outcomes and vendor sources to identify capabilities that require validation. | Standards provide product-neutral security and privacy expectations, while vendor documentation does not independently establish comparative performance in this organization. |
 | ADR-009 | Accepted | Use Apple Business Manager with Intune for company-owned Apple devices. | Apple Business Manager provides organizational assignment, automated enrollment, and Apps and Books licensing while Intune remains the MDM platform. |
+| ADR-010 | Accepted | Use Docker with Nginx as the planned repeatable nonproduction deployment method. | A versioned image can preserve the reviewed static application and server configuration, include a health check, and retain a prior image for rollback without implying a production deployment. |
+| ADR-011 | Accepted | Keep the prototype decision log limited to the current browser session. | Session-only logging supports the demonstration while avoiding persistent storage of sample or future identity and device details before audit, access, and retention requirements are approved. |
 
 The accepted platform decisions establish the working baseline for later authorized testing. Proposed and deferred decisions may change when new evidence is recorded.

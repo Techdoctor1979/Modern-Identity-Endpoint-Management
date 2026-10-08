@@ -22,7 +22,7 @@ The proposed system addresses that gap by connecting identity lifecycle, authent
 
 | Folder | Purpose |
 |---|---|
-| `src/` | Safe proof-of-concept procedures, scripts, and sanitized configuration examples. |
+| `src/` | Nonproduction prototype, automated tests, evaluation scripts, and sanitized deployment configuration. |
 | `docs/` | Requirements, module specifications, design decisions, risks, test plans, and progress records. |
 | `design/` | Editable Draw.io architecture source and exported preview image. |
 | `evidence/` | Anonymized evidence index and guidance for approved screenshots or exports. |
@@ -45,7 +45,9 @@ See [Version Control and Traceability](docs/version-control-overview.md) for the
 
 ## Current status
 
-The problem definition, literature analysis, architecture, module design, requirements, risk review, and version-control structure are complete. The Unit 4 browser prototype demonstrates identity access decisions, endpoint compliance evaluation, and session-only decision logging with sample data. Unit 5 separates the rules into testable functions and adds 16 automated tests with coverage reporting. The working platform baseline is now Entra ID, Intune, and Apple Business Manager. Authorized tenant configuration and vendor-specific testing remain later milestones, and the project will continue to distinguish documented capabilities from behavior observed directly during testing.
+The problem definition, literature analysis, architecture, module design, requirements, risk review, and version-control structure are complete. The Unit 4 browser prototype demonstrates identity access decisions, endpoint compliance evaluation, and session-only decision logging with sample data. Unit 5 separates the rules into testable functions and adds 16 automated tests with coverage reporting. Unit 6 connects the interface, controller, policy functions, visible results, and session log; it also adds requirement traceability, local performance measurements, a structured usability review, and a Docker/Nginx nonproduction deployment plan. The working platform baseline remains Entra ID, Intune, and Apple Business Manager. Authorized tenant configuration and vendor-specific testing remain later milestones, and the project continues to distinguish documented capabilities from behavior observed directly during testing.
+
+See [Unit 6 Integration, Evaluation, and Deployment Planning](docs/unit6-integration-evaluation-deployment.md) for the measured results, traceability table, deployment boundary, and limitations. The matching sanitized artifacts are listed in the [Unit 6 Evidence Index](evidence/unit6-evidence-index.md).
 
 ## Security and privacy
 

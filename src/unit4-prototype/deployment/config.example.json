@@ -1,0 +1,7 @@
+{
+  "environment": "nonproduction",
+  "logLevel": "info",
+  "decisionLogPersistence": "session-only",
+  "externalIdentityConnection": false,
+  "externalEndpointConnection": false
+}
