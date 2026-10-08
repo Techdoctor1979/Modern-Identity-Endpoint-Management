@@ -20,6 +20,21 @@ Each test record must identify the date, environment, tester, expected result, o
 
 The Unit 5 policy module uses `UT-01` through `UT-16` for isolated automated tests. These unit-test identifiers are documented in `unit5-core-logic-and-testing.md` and do not replace the broader `TC-01` through `TC-09` proof-of-concept test cases above.
 
+## Unit 6 Integration and Evaluation Checks
+
+The Unit 6 checks connect the inherited automated tests to the integrated browser workflow and evaluation evidence. They use synthetic information in the controlled local environment.
+
+| Check ID | Related requirement | Procedure | Recorded result |
+| --- | --- | --- | --- |
+| U6-IT-01 | FR-05, FR-10 | Submit an elevated access request from a noncompliant sample device. | `BLOCK` is displayed with the device-compliance reason. |
+| U6-IT-02 | FR-04, FR-10 | Submit a managed macOS sample with encryption disabled and updates overdue. | `NONCOMPLIANT` is displayed with both failed conditions. |
+| U6-IT-03 | FR-07, NFR-07 | Run the access and compliance scenarios in one browser session. | Both results appear in the temporary decision log. |
+| U6-EV-01 | NFR-07 | Rerun UT-01 through UT-16 with coverage reporting. | 16 passed; 100% line and function coverage; 96.97% branch coverage. |
+| U6-EV-02 | NFR-04 | Run seven benchmark trials of 250,000 evaluations per policy function after warm-up. | Local latency and throughput baseline recorded. |
+| U6-EV-03 | NFR-03 | Review six interface-usability and clarity criteria. | Mean 4.67/5; remediation and error recovery identified for improvement. |
+
+These results verify the local prototype only. They do not replace later authorized testing of live authentication, enrollment, compliance, Conditional Access, Microsoft Graph, or Apple Business Manager behavior.
+
 ## Control Effectiveness Review
 
 After the pilot, the review will consider whether the security and privacy controls work as intended without creating unnecessary problems for users or support staff.

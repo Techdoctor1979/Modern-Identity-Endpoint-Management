@@ -1,0 +1,33 @@
+✔ UT-01 grants a low-risk request that satisfies the access baseline (0.77625ms)
+✔ UT-02 blocks a disabled account (0.088917ms)
+✔ UT-03 blocks a high-risk sign-in (0.042458ms)
+✔ UT-04 blocks a noncompliant device (0.03ms)
+✔ UT-05 blocks an unknown device state (0.032375ms)
+✔ UT-06 requires MFA for an administrator (0.031583ms)
+✔ UT-07 requires MFA for a medium-risk request (0.034042ms)
+✔ UT-08 requires MFA for the administrative portal (0.026166ms)
+✔ UT-09 block takes priority over an MFA requirement (0.04025ms)
+✔ UT-10 rejects an unsupported access value (0.160666ms)
+✔ UT-11 marks an endpoint compliant when every baseline check passes (0.074167ms)
+✔ UT-12 marks an unmanaged endpoint noncompliant (0.033833ms)
+✔ UT-13 reports every failed compliance condition (0.030083ms)
+✔ UT-14 supports each endpoint platform (0.0445ms)
+✔ UT-15 rejects an unsupported endpoint value (0.036708ms)
+✔ UT-16 requires an input object (0.0385ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 38.248667
+ℹ start of coverage report
+ℹ --------------------------------------------------------------
+ℹ file          | line % | branch % | funcs % | uncovered lines
+ℹ --------------------------------------------------------------
+ℹ core-logic.js | 100.00 |    96.97 |  100.00 | 
+ℹ --------------------------------------------------------------
+ℹ all files     | 100.00 |    96.97 |  100.00 | 
+ℹ --------------------------------------------------------------
+ℹ end of coverage report

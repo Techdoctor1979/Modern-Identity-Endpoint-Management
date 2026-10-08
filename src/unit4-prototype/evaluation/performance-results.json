@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-10-04T03:28:12.900Z",
+  "environment": {
+    "node": "v24.19.0",
+    "platform": "darwin",
+    "architecture": "arm64"
+  },
+  "methodology": {
+    "warmupIterations": 10000,
+    "iterationsPerTrial": 250000,
+    "trials": 7,
+    "reportedStatistic": "median of trial results"
+  },
+  "benchmarks": [
+    {
+      "name": "Identity access evaluation",
+      "scenarios": 6,
+      "iterationsPerTrial": 250000,
+      "trials": 7,
+      "medianElapsedMs": 42.51062499999999,
+      "medianLatencyMs": 0.00017004249999999995,
+      "medianThroughputPerSecond": 5880882.720496348,
+      "checksum": 2041664
+    },
+    {
+      "name": "Endpoint compliance evaluation",
+      "scenarios": 6,
+      "iterationsPerTrial": 250000,
+      "trials": 7,
+      "medianElapsedMs": 53.14975000000004,
+      "medianLatencyMs": 0.00021259900000000016,
+      "medianThroughputPerSecond": 4703690.986316959,
+      "checksum": 3250001
+    }
+  ]
+}
