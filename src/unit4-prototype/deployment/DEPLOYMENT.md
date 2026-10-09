@@ -16,11 +16,11 @@ The proposed Unit 6 deployment packages the static demonstration application in 
 Run these commands from the prototype directory:
 
 ```text
-docker build -f deployment/Dockerfile -t identity-endpoint-prototype:0.6.0 .
-docker run --rm --name identity-endpoint-prototype -p 8080:80 identity-endpoint-prototype:0.6.0
+docker build -f deployment/Dockerfile -t identity-endpoint-prototype:0.6.1 .
+docker run --rm --name identity-endpoint-prototype -p 8080:80 identity-endpoint-prototype:0.6.1
 ```
 
-Open `http://localhost:8080` and verify that both evaluators and the decision log work. Stop the container with `Control-C`.
+Open `http://localhost:8080` and verify that both evaluators and the decision log work. The Dockerfile monitors the same main page with its configured container health check. Stop the container with `Control-C`.
 
 ## Configuration
 

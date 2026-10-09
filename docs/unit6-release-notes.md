@@ -1,10 +1,19 @@
 # Unit 6 Release Notes
 
-## Milestone
+## Release
 
-Proposed tag: `unit-6-integration-evaluation-v0.6.0`
+Corrected tag: `unit-6-integration-evaluation-v0.6.1`
+
+Version 0.6.1 carries the validated Unit 6 milestone forward without changing the policy logic or recorded results. Version 0.6.0 remains available as the original milestone release.
 
 This milestone moves the project from isolated policy testing to an integrated local workflow and records the first structured system-evaluation and deployment-planning evidence.
+
+## Corrected in version 0.6.1
+
+- Replaced the ambiguous `us` chart label with the standard microsecond symbol (`µs`).
+- Added local Mac setup and validation instructions.
+- Clarified that Docker uses a container health check against the main page rather than a separate health endpoint.
+- Clarified that the repository contains code, evidence, deployment files, and supporting documentation while the formal Word reports are submitted separately.
 
 ## Added
 
