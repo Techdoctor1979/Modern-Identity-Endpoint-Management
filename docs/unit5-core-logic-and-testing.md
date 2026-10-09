@@ -30,13 +30,13 @@ The automated tests use `UT-01` through `UT-16` so they remain distinct from the
 Run the suite from `src/unit4-prototype` with:
 
 ```text
-npm test
+node --test tests/core-logic.test.js
 ```
 
 Run the suite with coverage reporting with:
 
 ```text
-npm run test:coverage
+node --test --experimental-test-coverage tests/core-logic.test.js
 ```
 
 The recorded Unit 5 run completed 16 tests with 16 passes, zero failures, 100 percent line coverage, 96.97 percent branch coverage, and 100 percent function coverage for `core-logic.js`.

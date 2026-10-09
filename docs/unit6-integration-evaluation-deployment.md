@@ -57,6 +57,22 @@ The current prototype does not require runtime secrets or environment variables.
 
 The Docker configuration is a deployment plan and has not been represented as a completed production deployment. A later release should be built from a reviewed tag, tested in nonproduction, checked for basic health and security, approved, and promoted while retaining the previous image for rollback.
 
+## Local Mac setup and validation
+
+Open Terminal in the folder that contains the cloned repository, then run the following commands:
+
+```text
+cd Modern-Identity-Endpoint-Management/src/unit4-prototype
+node --version
+python3 --version
+node --test --experimental-test-coverage tests/core-logic.test.js
+node scripts/performance-benchmark.js
+python3 -m http.server 8765
+open http://127.0.0.1:8765
+```
+
+Use the browser interface to exercise the blocked-access, noncompliant endpoint, iOS or iPadOS, and decision-log workflows. Return to Terminal and press `Control-C` to stop the local server. The prototype uses the built-in Node.js test runner and has no external package dependencies. If Terminal reports that `node` is unavailable, install Node.js before continuing. The `core-logic.js` file is loaded by the browser and imported by the tests; it is not opened as a standalone Mac application.
+
 ## Limitations and next work
 
 The current evidence demonstrates the local policy and interface workflow. It does not prove live Entra ID, Intune, Microsoft Graph, or Apple Business Manager behavior. A later authorized phase would require a protected backend, nonproduction tenant access, representative test devices, minimized audit records, and platform-specific enrollment evidence.
