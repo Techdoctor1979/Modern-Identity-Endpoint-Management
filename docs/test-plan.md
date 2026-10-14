@@ -35,6 +35,23 @@ The Unit 6 checks connect the inherited automated tests to the integrated browse
 
 These results verify the local prototype only. They do not replace later authorized testing of live authentication, enrollment, compliance, Conditional Access, Microsoft Graph, or Apple Business Manager behavior.
 
+## Unit 7 System, Integration, and Acceptance Tests
+
+The Unit 7 browser suite uses Google Chrome in headless mode to exercise the complete local interface with synthetic values. The acceptance cases evaluate the prototype against the documented requirements; they are not independent user acceptance testing by organizational target users.
+
+| Test ID | Related requirement | Level | Procedure | Final result |
+| --- | --- | --- | --- | --- |
+| ST-01 | NFR-03 | System | Load the complete prototype interface. | Pass |
+| IT-01 | FR-05 | Integration | Submit a blocked access request through the interface and controller. | Pass |
+| ST-02 | FR-01 | System | Submit a low-risk compliant access request. | Pass |
+| IT-02 | FR-04, FR-10 | Integration | Submit a noncompliant endpoint and verify the required failure reasons. | Pass after correcting the test assertion |
+| ST-03 | FR-04 | System | Submit an endpoint that satisfies every baseline check. | Pass |
+| AT-01 | FR-07 | Acceptance | Confirm that all four completed evaluations appear in the session log. | Pass |
+| AT-02 | NFR-06 | Acceptance | Clear the session log. | Pass |
+| AT-03 | FR-07 | Acceptance | Refresh the browser and check whether the decision history remains. | Fail — known limitation |
+
+The initial run produced six passes and two failures. IT-02 was corrected because the application returned the two expected failed conditions plus a separate remediation message. The final run produced seven passes and one failure. AT-03 remains open because the current log is intentionally session-only and does not satisfy a persistent event-recording requirement.
+
 ## Control Effectiveness Review
 
 After the pilot, the review will consider whether the security and privacy controls work as intended without creating unnecessary problems for users or support staff.

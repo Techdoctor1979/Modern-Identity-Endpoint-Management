@@ -1,0 +1,31 @@
+UNIT 7 SYSTEM TEST SUMMARY
+Environment: Google Chrome headless at http://127.0.0.1:8767/
+Total: 8 | Passed: 6 | Failed: 2
+
+PASS ST-01 [NFR-03] [System] Load the complete prototype interface
+  Expected: Identity and Endpoint Management Prototype
+  Actual:   Identity and Endpoint Management Prototype
+PASS IT-01 [FR-05] [Integration] Send access form data through the controller to the policy engine
+  Expected: BLOCK
+  Actual:   BLOCK
+PASS ST-02 [FR-01] [System] Grant a low-risk compliant access request
+  Expected: GRANT
+  Actual:   GRANT
+FAIL IT-02 [FR-04 / FR-10] [Integration] Send endpoint form data through the controller to the compliance engine
+  Expected: NONCOMPLIANT|2
+  Actual:   NONCOMPLIANT|3
+PASS ST-03 [FR-04] [System] Approve an endpoint that satisfies the baseline
+  Expected: COMPLIANT
+  Actual:   COMPLIANT
+PASS AT-01 [FR-07] [Acceptance] Record every completed evaluation in the session decision log
+  Expected: 4
+  Actual:   4
+PASS AT-02 [NFR-06] [Acceptance] Clear the session decision log when requested
+  Expected: No decisions have been recorded.
+  Actual:   No decisions have been recorded.
+FAIL AT-03 [FR-07] [Acceptance] Retain decision history after a browser refresh
+  Expected: 1
+  Actual:   0
+
+Known limitation: AT-03 fails because the current demonstration log is intentionally stored only in browser memory. Persistent, privacy-controlled audit storage is planned for a later authorized implementation.
+

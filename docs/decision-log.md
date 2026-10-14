@@ -13,5 +13,6 @@
 | ADR-009 | Accepted | Use Apple Business Manager with Intune for company-owned Apple devices. | Apple Business Manager provides organizational assignment, automated enrollment, and Apps and Books licensing while Intune remains the MDM platform. |
 | ADR-010 | Accepted | Use Docker with Nginx as the planned repeatable nonproduction deployment method. | A versioned image can preserve the reviewed static application and server configuration, include a health check, and retain a prior image for rollback without implying a production deployment. |
 | ADR-011 | Accepted | Keep the prototype decision log limited to the current browser session. | Session-only logging supports the demonstration while avoiding persistent storage of sample or future identity and device details before audit, access, and retention requirements are approved. |
+| ADR-012 | Proposed | Require privacy-controlled persistent audit storage before a production pilot. | Unit 7 test AT-03 confirms that the session-only log does not survive refresh and cannot serve as organizational audit evidence. A replacement needs approved fields, protected access, retention, deletion, recovery, and failure testing. |
 
 The accepted platform decisions establish the working baseline for later authorized testing. Proposed and deferred decisions may change when new evidence is recorded.
