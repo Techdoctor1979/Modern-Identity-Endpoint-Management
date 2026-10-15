@@ -1,6 +1,6 @@
 # Unit 7 Release Notes
 
-## Planned release
+## Milestone release
 
 Tag: `unit-7-system-testing-maintenance-v0.7.0`
 
