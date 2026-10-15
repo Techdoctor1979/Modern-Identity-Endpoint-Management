@@ -305,12 +305,16 @@ async function run() {
       await chromeExited;
     }
     await new Promise((resolve) => server.close(resolve));
-    fs.rmSync(profile, {
-      recursive: true,
-      force: true,
-      maxRetries: 5,
-      retryDelay: 200
-    });
+    try {
+      fs.rmSync(profile, {
+        recursive: true,
+        force: true,
+        maxRetries: 5,
+        retryDelay: 200
+      });
+    } catch (error) {
+      console.warn(`Chrome profile cleanup warning: ${error.message}`);
+    }
   }
 }
 
