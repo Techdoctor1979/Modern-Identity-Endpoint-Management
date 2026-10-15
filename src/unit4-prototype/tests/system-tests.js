@@ -185,8 +185,10 @@ async function run() {
   const debugPort = await findAvailablePort();
   const profile = fs.mkdtempSync(path.join(os.tmpdir(), "unit7-chrome-"));
   const chrome = spawn(locateChrome(), [
-    "--headless=new",
+    "--headless",
     "--disable-gpu",
+    "--disable-dev-shm-usage",
+    "--no-sandbox",
     "--no-first-run",
     "--no-default-browser-check",
     "--remote-allow-origins=*",
