@@ -8,4 +8,3 @@ The Unit 7 preparation repeated the same local benchmark method used in Unit 6: 
 | Endpoint compliance | 0.213 microseconds | 0.219 microseconds | Small variation on a general-purpose local computer |
 
 The values cover only local JavaScript policy-function execution. They exclude browser rendering, authentication, network latency, vendor services, databases, persistent logging, and concurrent users. They are useful as development regression baselines and are not production-capacity claims.
-

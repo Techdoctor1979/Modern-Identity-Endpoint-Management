@@ -35,4 +35,3 @@ AT-03 fails because the prototype stores the decision log only in browser memory
 ## Boundaries
 
 All evidence uses synthetic values in a controlled local home lab. This release does not claim live Entra ID, Intune, Apple Business Manager, Microsoft Graph, Addigy, production-directory, production-device, or organizational-network testing.
-

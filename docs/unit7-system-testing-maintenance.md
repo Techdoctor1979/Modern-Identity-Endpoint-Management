@@ -102,4 +102,3 @@ node tests/system-tests.js --initial-assertion
 ```
 
 The normal system-test command returns a successful process status when AT-03 is the only failed case because it is an explicitly documented open limitation. Any other failed case returns an error status.
-

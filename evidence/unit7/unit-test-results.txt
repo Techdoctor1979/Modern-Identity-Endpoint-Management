@@ -9,4 +9,3 @@ core-logic.js | line 100.00% | branch 96.97% | functions 100.00%
 all files     | line 100.00% | branch 96.97% | functions 100.00%
 
 The regression run covers UT-01 through UT-16 in tests/core-logic.test.js. Timing values are omitted because they vary between local runs and do not affect the recorded pass or coverage results.
-

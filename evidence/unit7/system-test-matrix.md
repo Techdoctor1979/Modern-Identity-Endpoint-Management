@@ -12,4 +12,3 @@
 | AT-03 | FR-07 | Acceptance | Decision history survives refresh | Fail — known limitation | Figure 3 and `system-test-results.txt` |
 
 The acceptance cases evaluate the prototype against documented requirements. They are not represented as independent user acceptance testing by organizational target users.
-

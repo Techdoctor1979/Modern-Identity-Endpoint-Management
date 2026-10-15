@@ -28,4 +28,3 @@ FAIL AT-03 [FR-07] [Acceptance] Retain decision history after a browser refresh
   Actual:   0
 
 Known limitation: AT-03 fails because the current demonstration log is intentionally stored only in browser memory. Persistent, privacy-controlled audit storage is planned for a later authorized implementation.
-
