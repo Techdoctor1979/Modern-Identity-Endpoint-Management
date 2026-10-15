@@ -28,6 +28,14 @@ The Unit 6 evaluation adds a requirement-to-evidence table, a repeatable local b
 
 The proposed nonproduction deployment uses Docker and Nginx so the application files and server configuration can be versioned together. The configuration includes a health check, basic browser-security headers, nonsecret example settings, and rollback guidance. This remains a deployment plan; no production deployment or live vendor integration is claimed.
 
+## Assignment Activity Unit 7
+
+I added a repeatable headless Chrome suite that tests the interface, controller, policy functions, visible results, and session log as one system. The initial run produced six passes and two failures. One failure came from an incorrect assertion that counted the remediation message as if it were a failed condition. After I changed the test to verify the required messages by content, the final run produced seven passes and one failure.
+
+The remaining AT-03 failure is an accepted limitation, not an unexplained defect. The current decision log is stored only in browser memory and does not survive a refresh. Persistent audit storage will require approved fields, access controls, encryption, retention and deletion rules, recovery procedures, and privacy review before implementation.
+
+The Unit 7 package also adds corrective, adaptive, perfective, and preventive maintenance activities; a maintenance schedule; a change-control workflow; post-deployment risks; and production-readiness gates. A later authorized phase would test the baseline in a nonproduction Microsoft tenant with representative Windows and Apple devices before a limited organizational pilot.
+
 ## Current limitations
 
-Available licenses, representative devices, permissions, and Apple enrollment services may limit testing. Any unsupported test will be recorded as `Not tested` with the reason. Repository evidence must remain anonymized and free of credentials, production data, and unnecessary personal information. Later testing should add the remaining branch case, accessibility review, representative-user evaluation, end-to-end timing, and authorized platform evidence where access permits.
+Available licenses, representative devices, permissions, and Apple enrollment services may limit testing. Any unsupported test will be recorded as `Not tested` with the reason. Repository evidence must remain anonymized and free of credentials, production data, and unnecessary personal information. Later testing should add the remaining branch case, persistent audit storage, accessibility review, representative-user evaluation, end-to-end timing, and authorized platform evidence where access permits.

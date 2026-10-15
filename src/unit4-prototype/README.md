@@ -6,7 +6,7 @@ This folder contains the nonproduction browser prototype used for the capstone i
 
 - Node.js for the automated tests and benchmark
 - Python 3 for the local static web server
-- A modern browser
+- Google Chrome or Chromium for the Unit 7 headless system suite
 
 The prototype uses built-in Node.js features and has no external package dependencies. If Terminal reports that `node` is unavailable, install Node.js before continuing.
 
@@ -36,6 +36,14 @@ Run the performance benchmark:
 ```text
 node scripts/performance-benchmark.js
 ```
+
+Run the Unit 7 system, integration, and requirement-based acceptance suite:
+
+```text
+node tests/system-tests.js
+```
+
+The final system run reports seven passes and one documented failure. AT-03 confirms that the current session-only decision log does not survive a browser refresh. The test remains visible because persistent audit storage requires an approved security, privacy, retention, and recovery design.
 
 Start the local web server and open the prototype:
 
