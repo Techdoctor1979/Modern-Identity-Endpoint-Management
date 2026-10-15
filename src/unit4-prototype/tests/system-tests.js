@@ -296,12 +296,21 @@ async function run() {
     if (client) client.close();
     const chromeExited = new Promise((resolve) => chrome.once("exit", resolve));
     chrome.kill("SIGTERM");
-    await Promise.race([
-      chromeExited,
-      new Promise((resolve) => setTimeout(resolve, 2000))
+    const exitedCleanly = await Promise.race([
+      chromeExited.then(() => true),
+      new Promise((resolve) => setTimeout(() => resolve(false), 2000))
     ]);
+    if (!exitedCleanly) {
+      chrome.kill("SIGKILL");
+      await chromeExited;
+    }
     await new Promise((resolve) => server.close(resolve));
-    fs.rmSync(profile, { recursive: true, force: true });
+    fs.rmSync(profile, {
+      recursive: true,
+      force: true,
+      maxRetries: 5,
+      retryDelay: 200
+    });
   }
 }
 
