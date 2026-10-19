@@ -52,6 +52,12 @@ The Unit 7 browser suite uses Google Chrome in headless mode to exercise the com
 
 The initial run produced six passes and two failures. IT-02 was corrected because the application returned the two expected failed conditions plus a separate remediation message. The final run produced seven passes and one failure. AT-03 remains open because the current log is intentionally session-only and does not satisfy a persistent event-recording requirement.
 
+## Unit 7 Representative User Follow-Up
+
+On October 19, 2026, three employees who had participated in earlier prototype testing provided qualitative follow-up feedback: a receptionist representing a nontechnical end user, a Level 1 Help Desk technician, and a systems administrator. The receptionist needed additional explanation of identity-access and endpoint-compliance terminology. The Level 1 Help Desk technician and systems administrator found the workflow and decision explanations clear and useful. The employees formed a small internal convenience sample. No numerical score was assigned because this follow-up did not use a new controlled rating protocol.
+
+The prototype was updated with a plain-language term guide, an everyday-language explanation beneath each technical decision, specific corrective actions for failed device-security conditions, and a visible notice explaining that the decision log is temporary. Two automated checks verify the term guide and temporary-log notice. A future controlled study should record task completion, time, assistance, errors, and ratings for each participant.
+
 ## Control Effectiveness Review
 
 After the pilot, the review will consider whether the security and privacy controls work as intended without creating unnecessary problems for users or support staff.

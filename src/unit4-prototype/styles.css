@@ -68,6 +68,18 @@ main { max-width: 1180px; margin: 0 auto; padding: 1.4rem 2rem 2rem; }
   color: #4d3a13;
 }
 
+.term-guide {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.term-guide h2 { margin: 0 0 .7rem; font-size: 1.15rem; }
+.term-guide dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem 1.4rem; margin: 0; }
+.term-guide dl div { display: grid; grid-template-columns: minmax(7rem, auto) 1fr; gap: .55rem; }
+.term-guide dt { font-weight: 700; }
+.term-guide dd { margin: 0; color: var(--muted); }
+
 .feature-nav {
   display: flex;
   gap: .6rem;
@@ -109,6 +121,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 1.4rem 2rem 2rem; }
 }
 .panel-heading h2 { margin: 0; font-size: 1.55rem; }
 .panel-heading p:last-child { margin: .35rem 0 0; color: var(--muted); }
+.panel-heading .session-note { color: #4d3a13; }
 .module-label { color: var(--blue); }
 
 .input-grid {
@@ -148,5 +161,7 @@ footer {
 @media (max-width: 800px) {
   .site-header, .panel-heading, footer { align-items: flex-start; flex-direction: column; }
   .input-grid { grid-template-columns: 1fr; }
+  .term-guide dl, .term-guide dl div { grid-template-columns: 1fr; }
+  .term-guide dl div { gap: .1rem; }
   .primary-button { width: 100%; }
 }

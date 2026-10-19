@@ -17,11 +17,13 @@ This resubmission candidate extends the Unit 7 milestone with executed container
 - Maintenance schedule, change-control workflow, and post-deployment risk review.
 - Production-readiness gates and a phased pilot path.
 - Sanitized figures and text logs matching the Unit 7 report.
-- Eight automated input, deployment, security-header, and structural accessibility checks.
+- Ten automated input, deployment, security-header, structural accessibility, and plain-language guidance checks.
 - Seven headless-browser accessibility checks.
 - A repeatable 200-sample identity and 200-sample compliance browser benchmark against the running Nginx container.
 - Executed Docker build, health, HTTP-response, response-header, and Docker Scout validation.
 - Remediation to `nginx:1.30.6-alpine3.24-slim` with a zlib security upgrade.
+- A plain-language term guide, decision explanations, specific remediation steps, and a visible session-log limitation notice based on the October 19, 2026 representative-user follow-up.
+- An anonymized qualitative follow-up record for three representative users; no new numerical usability score was calculated.
 
 ## Verified
 
@@ -32,7 +34,7 @@ This resubmission candidate extends the Unit 7 milestone with executed container
 - The access and compliance forms reached the shared policy functions.
 - Four completed evaluations appeared in the session log.
 - The log cleared when requested.
-- Eight of eight additional automated checks passed, bringing the combined automated total to 24 of 24.
+- Ten of ten additional automated checks passed, bringing the combined automated total to 26 of 26.
 - Seven of seven structural browser-accessibility checks passed.
 - The final container became healthy and returned HTTP 200 with all four configured security headers.
 - Docker Scout indexed 26 packages in the final image and reported no vulnerable packages at the time of the milestone scan.
@@ -43,4 +45,4 @@ AT-03 fails because the prototype stores the decision log only in browser memory
 
 ## Boundaries
 
-All evidence uses synthetic values in a controlled local home lab. The browser timing excludes external services, backend processing, database storage, network workloads, and concurrent users. The accessibility checks are structural and do not replace manual keyboard, screen-reader, contrast, zoom, or representative-user evaluation. This release does not claim live Entra ID, Intune, Apple Business Manager, Microsoft Graph, Addigy, production-directory, production-device, or organizational-network testing.
+All evidence uses synthetic values in a controlled local home lab. The browser timing excludes external services, backend processing, database storage, network workloads, and concurrent users. The accessibility checks are structural and do not replace manual keyboard, screen-reader, contrast, or zoom evaluation. The three-person qualitative follow-up does not replace a larger structured task-based study. This release does not claim live Entra ID, Intune, Apple Business Manager, Microsoft Graph, Addigy, production-directory, production-device, or organizational-network testing.

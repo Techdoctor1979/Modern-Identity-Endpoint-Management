@@ -23,8 +23,15 @@
 
   function renderResult(elementId, result, summary) {
     const element = document.getElementById(elementId);
+    const plainLanguage = {
+      GRANT: "Access is allowed.",
+      "REQUIRE MFA": "Complete an additional identity check to continue.",
+      BLOCK: "Access is not allowed because one or more security requirements were not met.",
+      COMPLIANT: "The device meets the evaluated security requirements.",
+      NONCOMPLIANT: "The device does not currently meet all evaluated security requirements."
+    };
     element.className = `result ${result.level}`;
-    element.innerHTML = `<h3>${result.decision}</h3><p>${summary}</p><ul>${result.reasons.map((reason) => `<li>${reason}</li>`).join("")}</ul>`;
+    element.innerHTML = `<h3>${result.decision}</h3><p class="decision-meaning"><strong>${plainLanguage[result.decision]}</strong></p><p>${summary}</p><ul>${result.reasons.map((reason) => `<li>${reason}</li>`).join("")}</ul>`;
   }
 
   function addLog(feature, result) {

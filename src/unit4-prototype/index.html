@@ -21,9 +21,20 @@
       <strong>Nonproduction demonstration:</strong> This prototype uses synthetic sample data and does not connect to Microsoft Entra ID, Intune, Apple Business Manager, Addigy, or a production directory.
     </section>
 
+    <section class="term-guide" aria-labelledby="term-guide-heading">
+      <h2 id="term-guide-heading">What these terms mean</h2>
+      <dl>
+        <div><dt>Identity access</dt><dd>A decision about whether a user may open a company resource.</dd></div>
+        <div><dt>MFA</dt><dd>An additional identity check, such as approving a notification or entering a code.</dd></div>
+        <div><dt>Endpoint</dt><dd>A computer, phone, or tablet.</dd></div>
+        <div><dt>Device compliance</dt><dd>Whether a device meets the required security settings.</dd></div>
+        <div><dt>Remediation</dt><dd>The action needed to correct a security problem.</dd></div>
+      </dl>
+    </section>
+
     <nav class="feature-nav" aria-label="Prototype features" role="tablist">
-      <button id="access-tab" class="nav-button active" data-panel="access-panel" role="tab" aria-controls="access-panel" aria-selected="true" tabindex="0">Identity access evaluation</button>
-      <button id="compliance-tab" class="nav-button" data-panel="compliance-panel" role="tab" aria-controls="compliance-panel" aria-selected="false" tabindex="-1">Endpoint compliance evaluation</button>
+      <button id="access-tab" class="nav-button active" data-panel="access-panel" role="tab" aria-controls="access-panel" aria-selected="true" tabindex="0">Check user access</button>
+      <button id="compliance-tab" class="nav-button" data-panel="compliance-panel" role="tab" aria-controls="compliance-panel" aria-selected="false" tabindex="-1">Check device security</button>
       <button id="activity-tab" class="nav-button" data-panel="activity-panel" role="tab" aria-controls="activity-panel" aria-selected="false" tabindex="-1">Decision log</button>
     </nav>
 
@@ -32,7 +43,7 @@
         <div>
           <p class="module-label">Modules M2 and M5</p>
           <h2 id="access-heading">Identity access evaluation</h2>
-          <p>Evaluate a sample sign-in using account, authentication, device, and risk conditions.</p>
+          <p>Check whether a sample user should be allowed to open a company resource.</p>
         </div>
         <button id="load-access-demo" class="secondary-button">Load blocked-access example</button>
       </div>
@@ -91,7 +102,7 @@
         <div>
           <p class="module-label">Modules M3 and M4</p>
           <h2 id="compliance-heading">Endpoint compliance evaluation</h2>
-          <p>Check whether a sample Windows or Apple endpoint meets the proposed baseline.</p>
+          <p>Check whether a sample Windows or Apple device meets the required security settings.</p>
         </div>
         <button id="load-compliance-demo" class="secondary-button">Load noncompliant example</button>
       </div>
@@ -135,7 +146,7 @@
             <option value="overdue">Overdue</option>
           </select>
         </label>
-        <button type="submit" class="primary-button">Evaluate compliance</button>
+        <button type="submit" class="primary-button">Check device security</button>
       </form>
 
       <div id="compliance-result" class="result neutral" aria-live="polite">
@@ -150,6 +161,7 @@
           <p class="module-label">Module M6</p>
           <h2 id="activity-heading">Decision log</h2>
           <p>Review decisions produced during this browser session.</p>
+          <p class="session-note"><strong>Temporary log:</strong> The entries are cleared if this page is refreshed or closed.</p>
         </div>
         <button id="clear-log" class="secondary-button">Clear log</button>
       </div>
