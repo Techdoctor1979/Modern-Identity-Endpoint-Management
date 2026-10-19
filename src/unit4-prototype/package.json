@@ -1,6 +1,6 @@
 {
   "name": "identity-endpoint-policy-prototype",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "private": true,
   "description": "Nonproduction policy evaluation prototype for the MSIT 5910 capstone project",
   "scripts": {
@@ -8,6 +8,7 @@
     "test:coverage": "node --test --experimental-test-coverage tests/*.test.js",
     "test:system": "node tests/system-tests.js",
     "test:system:initial": "node tests/system-tests.js --initial-assertion",
+    "test:container": "node scripts/container-browser-validation.js",
     "benchmark": "node scripts/performance-benchmark.js"
   }
 }

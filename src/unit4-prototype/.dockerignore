@@ -1,0 +1,7 @@
+evaluation/
+scripts/
+tests/
+README.md
+package.json
+deployment/config.example.json
+deployment/DEPLOYMENT.md
