@@ -55,3 +55,13 @@ test("RV-07 connects each tab to an accessible panel", () => {
 test("RV-08 labels the decision log with a table caption", () => {
   assert.match(html, /<caption[^>]*>Session-only identity access and endpoint compliance decisions<\/caption>/);
 });
+
+test("RV-09 explains technical terms in plain language", () => {
+  ["Identity access", "MFA", "Endpoint", "Device compliance", "Remediation"].forEach((term) => {
+    assert.match(html, new RegExp(`<dt>${term}<\\/dt>`));
+  });
+});
+
+test("RV-10 visibly explains that the decision log is temporary", () => {
+  assert.match(html, /Temporary log:<\/strong> The entries are cleared if this page is refreshed or closed\./);
+});

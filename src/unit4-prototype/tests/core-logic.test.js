@@ -86,6 +86,8 @@ test("UT-13 reports every failed compliance condition", () => {
   });
   assert.equal(result.decision, "NONCOMPLIANT");
   assert.equal(result.reasons.length, 5);
+  assert.match(result.reasons.join(" "), /Turn on device encryption/);
+  assert.match(result.reasons.join(" "), /Install the required security updates/);
 });
 
 test("UT-14 supports each endpoint platform", () => {

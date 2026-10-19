@@ -8,7 +8,7 @@ The results verify the local prototype. They do not claim that Microsoft Entra I
 
 ## Test method
 
-The 16 Unit 5 policy tests were rerun first as a regression baseline. All 16 passed with 100 percent line and function coverage and 96.97 percent branch coverage. Eight additional automated checks validated invalid input handling, the pinned Nginx image, the container health check, response-security declarations, the Content Security Policy, language and viewport metadata, tab-to-panel relationships, and the decision-log caption. All eight passed. The original Unit 7 browser suite then started the prototype on a local web server and used Google Chrome in headless mode to enter values through the interface, submit both forms, inspect decisions and reasons, and verify the session log.
+The 16 Unit 5 policy tests were rerun first as a regression baseline. All 16 passed with 100 percent line and function coverage and 96.97 percent branch coverage. Ten additional automated checks validated invalid input handling, the pinned Nginx image, the container health check, response-security declarations, the Content Security Policy, language and viewport metadata, tab-to-panel relationships, the decision-log caption, the plain-language term guide, and the visible temporary-log notice. All ten passed. The original Unit 7 browser suite then started the prototype on a local web server and used Google Chrome in headless mode to enter values through the interface, submit both forms, inspect decisions and reasons, and verify the session log.
 
 The browser suites are dependency-free. They use the Node.js standard library and Chrome DevTools Protocol, so they do not add browser-automation packages to the prototype. The original requirement-traced suite is `src/unit4-prototype/tests/system-tests.js`. The resubmission checks are `src/unit4-prototype/tests/resubmission-validation.test.js` and `src/unit4-prototype/scripts/container-browser-validation.js`.
 
@@ -36,7 +36,7 @@ AT-03 remains failed because the decision log is stored only in browser memory a
 | Indicator | Recorded result | Interpretation |
 | --- | ---: | --- |
 | Unit tests | 16 of 16 passed | Defined policy cases passed |
-| Additional automated validation | 8 of 8 passed | Input, deployment, header, and structural checks passed |
+| Additional automated validation | 10 of 10 passed | Input, deployment, header, structural, and plain-language guidance checks passed |
 | Coverage | 100% lines and functions; 96.97% branches | One uncommon branch still needs a focused test |
 | System suite | 7 passed; 1 failed | Log persistence remains open |
 | Access latency | 0.176 microseconds median | Unit 7 local policy-function rerun |
@@ -47,8 +47,11 @@ AT-03 remains failed because the decision log is stored only in browser memory a
 | Container deployment | Healthy; HTTP 200; four required headers present | Executed local nonproduction image |
 | Final image scan | 0 critical, 0 high, 0 medium, 0 low | 26 packages indexed at scan time |
 | Usability review | 4.67 out of 5 | Initial single-reviewer result from Unit 6 |
+| Representative-user follow-up | Three participants; qualitative feedback | Nontechnical participant needed clearer definitions; no new numerical score calculated |
 
-The policy-function timings are narrow development baselines. The browser timings are more representative because they include a local Chrome DevTools round trip, form submission, decision, and rendering through the running Nginx container. Both sets still exclude authentication, external network workloads, vendor APIs, backend processing, databases, audit storage, and concurrent users. They must not be treated as production-capacity evidence. The accessibility result is a structural browser review and does not replace manual keyboard, screen-reader, contrast, zoom, or representative-user evaluation.
+The policy-function timings are narrow development baselines. The browser timings are more representative because they include a local Chrome DevTools round trip, form submission, decision, and rendering through the running Nginx container. Both sets still exclude authentication, external network workloads, vendor APIs, backend processing, databases, audit storage, and concurrent users. They must not be treated as production-capacity evidence. The accessibility result is a structural browser review and does not replace manual keyboard, screen-reader, contrast, or zoom evaluation.
+
+On October 19, 2026, three employees who had participated in earlier prototype testing provided qualitative follow-up feedback: a receptionist representing a nontechnical end user, a Level 1 Help Desk technician, and a systems administrator. The Help Desk technician and systems administrator found the workflow and decision explanations clear and useful. The receptionist needed additional explanation of identity-access and endpoint-compliance terminology. In response, the prototype now defines the main terms in plain language, explains each technical decision in everyday language, gives a specific action for each failed device-security condition, and visibly states that the session log clears after a refresh or when the page is closed. The employees formed a small internal convenience sample, and no new numerical usability score was calculated. A later controlled study should record task completion, time, assistance, errors, and ratings under a consistent protocol.
 
 ## Maintenance strategy
 
@@ -87,7 +90,7 @@ No credentials, tokens, tenant identifiers, device serial numbers, production ex
 
 ## Production-readiness path
 
-The current prototype is not production-ready. The executed local image and clean scan strengthen the deployment evidence but do not resolve production security or operational readiness. Before an organizational pilot, AT-03 must be corrected with approved audit storage and the replacement must pass storage, access, retention, deletion, recovery, and regression tests. Representative-user testing, manual accessibility evaluation, TLS and secrets design, monitoring, rollback validation, security and privacy review, licensing, policy ownership, and support procedures also require completion or stakeholder approval.
+The current prototype is not production-ready. The executed local image and clean scan strengthen the deployment evidence but do not resolve production security or operational readiness. Before an organizational pilot, AT-03 must be corrected with approved audit storage and the replacement must pass storage, access, retention, deletion, recovery, and regression tests. Structured task-based representative-user testing with a larger group, manual accessibility evaluation, TLS and secrets design, monitoring, rollback validation, security and privacy review, licensing, policy ownership, and support procedures also require completion or stakeholder approval.
 
 The next authorized phase would connect a nonproduction Microsoft tenant, configure Apple Business Manager for eligible organizational Apple devices, and test representative Windows, macOS, iOS, and iPadOS devices. A limited pilot would measure MFA success, enrollment success, policy accuracy, remediation time, help-desk demand, user feedback, and service reliability. Deployment would expand only through controlled groups with coexistence and rollback available until documented exit criteria are met.
 

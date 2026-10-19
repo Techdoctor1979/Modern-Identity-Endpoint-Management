@@ -26,13 +26,13 @@ node --version
 python3 --version
 ```
 
-Run the 16 policy tests and eight Unit 7 resubmission checks with coverage:
+Run the 16 policy tests and ten Unit 7 resubmission checks with coverage:
 
 ```text
 node --test --experimental-test-coverage tests/*.test.js
 ```
 
-The combined run reports 24 of 24 passes. Coverage for `core-logic.js` remains 100 percent for executable lines and functions and 96.97 percent for branches.
+The combined run reports 26 of 26 passes. Coverage for `core-logic.js` remains 100 percent for executable lines and functions and 96.97 percent for branches.
 
 Run the performance benchmark:
 
@@ -56,6 +56,8 @@ open http://127.0.0.1:8765
 ```
 
 Use the interface to review the blocked-access, noncompliant endpoint, iOS or iPadOS, and decision-log workflows. Return to Terminal and press `Control-C` to stop the server.
+
+The interface includes a plain-language term guide, an everyday-language explanation for each technical decision, specific corrective actions for failed device-security checks, and a visible notice that the decision log is temporary. These changes respond to the October 19, 2026 representative-user follow-up recorded in `evaluation/representative-user-follow-up.md`.
 
 The `core-logic.js` file is loaded by the browser and imported by the automated tests. It is not opened as a standalone Mac application.
 

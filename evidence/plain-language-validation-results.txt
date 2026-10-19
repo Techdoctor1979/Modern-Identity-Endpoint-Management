@@ -1,0 +1,30 @@
+UNIT 7 PLAIN-LANGUAGE FOLLOW-UP VALIDATION
+Date: October 19, 2026
+Environment: Local prototype with synthetic data
+
+Policy tests
+PASS UT-01 through UT-16
+
+Resubmission validation
+PASS RV-01 rejects invalid non-object policy input
+PASS RV-02 pins the remediated Nginx image
+PASS RV-03 declares a container health check
+PASS RV-04 declares the required response security headers
+PASS RV-05 declares a restrictive Content Security Policy
+PASS RV-06 includes document language and viewport metadata
+PASS RV-07 connects each tab to an accessible panel
+PASS RV-08 labels the decision log with a table caption
+PASS RV-09 explains technical terms in plain language
+PASS RV-10 visibly explains that the decision log is temporary
+
+Summary
+Tests: 26
+Passed: 26
+Failed: 0
+
+Coverage
+core-logic.js lines: 100.00 percent
+core-logic.js branches: 96.97 percent
+core-logic.js functions: 100.00 percent
+
+The original requirement-traced browser suite was rerun after the interface update. Seven cases passed. AT-03 remained the single documented failure because the temporary decision log clears after a browser refresh. No unexpected regression was found.

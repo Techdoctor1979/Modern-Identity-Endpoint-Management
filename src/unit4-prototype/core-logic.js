@@ -51,21 +51,21 @@
     if (input.account === "disabled") {
       decision = "BLOCK";
       level = "fail";
-      reasons.push("The account is disabled.");
+      reasons.push("The account is disabled. Contact an administrator if access is expected.");
     }
 
     if (input.risk === "high") {
       decision = "BLOCK";
       level = "fail";
-      reasons.push("The sign-in risk is high.");
+      reasons.push("The sign-in risk is high. Contact support or an administrator to verify the request.");
     }
 
     if (input.device === "noncompliant" || input.device === "unknown") {
       decision = "BLOCK";
       level = "fail";
       reasons.push(input.device === "noncompliant"
-        ? "The device does not meet the compliance baseline."
-        : "The device compliance state is unknown.");
+        ? "The device does not meet the compliance baseline. Correct the listed security settings or use an approved compliant device."
+        : "The device compliance state is unknown. Confirm that the device is enrolled and has reported its current status.");
     }
 
     const requiresMfa = input.role === "administrator"
@@ -89,11 +89,11 @@
     validateInput(input, COMPLIANCE_VALUES);
 
     const checks = [
-      [input.managed === "managed", "The endpoint is not enrolled in management."],
-      [input.encryption === "enabled", "Encryption is disabled."],
-      [input.screenLock === "enabled", "The required screen lock is disabled."],
-      [input.os === "supported", "The operating-system version is unsupported."],
-      [input.updates === "current", "Required security updates are overdue."]
+      [input.managed === "managed", "The endpoint is not enrolled in management. Enroll the device in the approved management system."],
+      [input.encryption === "enabled", "Encryption is disabled. Turn on device encryption."],
+      [input.screenLock === "enabled", "The required screen lock is disabled. Enable a screen lock."],
+      [input.os === "supported", "The operating-system version is unsupported. Upgrade to a supported version."],
+      [input.updates === "current", "Required security updates are overdue. Install the required security updates."]
     ];
     const failures = checks.filter(([passed]) => !passed).map(([, message]) => message);
 
