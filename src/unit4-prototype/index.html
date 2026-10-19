@@ -18,16 +18,16 @@
 
   <main>
     <section class="notice" aria-label="Prototype notice">
-      <strong>Demonstration environment:</strong> This prototype uses sample data and does not connect to Microsoft Entra ID, Intune, Apple Business Manager, Addigy, or a production directory.
+      <strong>Nonproduction demonstration:</strong> This prototype uses synthetic sample data and does not connect to Microsoft Entra ID, Intune, Apple Business Manager, Addigy, or a production directory.
     </section>
 
-    <nav class="feature-nav" aria-label="Prototype features">
-      <button class="nav-button active" data-panel="access-panel">Identity access evaluation</button>
-      <button class="nav-button" data-panel="compliance-panel">Endpoint compliance evaluation</button>
-      <button class="nav-button" data-panel="activity-panel">Decision log</button>
+    <nav class="feature-nav" aria-label="Prototype features" role="tablist">
+      <button id="access-tab" class="nav-button active" data-panel="access-panel" role="tab" aria-controls="access-panel" aria-selected="true" tabindex="0">Identity access evaluation</button>
+      <button id="compliance-tab" class="nav-button" data-panel="compliance-panel" role="tab" aria-controls="compliance-panel" aria-selected="false" tabindex="-1">Endpoint compliance evaluation</button>
+      <button id="activity-tab" class="nav-button" data-panel="activity-panel" role="tab" aria-controls="activity-panel" aria-selected="false" tabindex="-1">Decision log</button>
     </nav>
 
-    <section id="access-panel" class="feature-panel active" aria-labelledby="access-heading">
+    <section id="access-panel" class="feature-panel active" role="tabpanel" aria-labelledby="access-tab" tabindex="0">
       <div class="panel-heading">
         <div>
           <p class="module-label">Modules M2 and M5</p>
@@ -86,7 +86,7 @@
       </div>
     </section>
 
-    <section id="compliance-panel" class="feature-panel" aria-labelledby="compliance-heading">
+    <section id="compliance-panel" class="feature-panel" role="tabpanel" aria-labelledby="compliance-tab" tabindex="0" hidden>
       <div class="panel-heading">
         <div>
           <p class="module-label">Modules M3 and M4</p>
@@ -144,7 +144,7 @@
       </div>
     </section>
 
-    <section id="activity-panel" class="feature-panel" aria-labelledby="activity-heading">
+    <section id="activity-panel" class="feature-panel" role="tabpanel" aria-labelledby="activity-tab" tabindex="0" hidden>
       <div class="panel-heading">
         <div>
           <p class="module-label">Module M6</p>
@@ -155,6 +155,7 @@
       </div>
       <div class="table-wrap">
         <table>
+          <caption class="visually-hidden">Session-only identity access and endpoint compliance decisions</caption>
           <thead>
             <tr>
               <th>Time</th>

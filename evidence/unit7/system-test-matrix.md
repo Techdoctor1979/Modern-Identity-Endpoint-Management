@@ -10,5 +10,11 @@
 | AT-01 | FR-07 | Acceptance | All completed evaluations appear in the session log | Pass | Figure 1 and `system-test-results.txt` |
 | AT-02 | NFR-06 | Acceptance | User can clear the session log | Pass | `system-test-results.txt` |
 | AT-03 | FR-07 | Acceptance | Decision history survives refresh | Fail — known limitation | Figure 3 and `system-test-results.txt` |
+| RV-01 | NFR-02, NFR-05 | Automated validation | Invalid non-object input is rejected | Pass | `automated-validation-results.txt` |
+| RV-02–RV-05 | NFR-05, NFR-07 | Automated validation | Image pinning, health check, and security headers are declared | Pass | `automated-validation-results.txt` |
+| RV-06–RV-08 | NFR-02, NFR-03 | Automated validation | Language, viewport, tab/panel relationships, and table caption are present | Pass | `automated-validation-results.txt` |
+| A11Y-01–A11Y-07 | NFR-02, NFR-03 | Browser accessibility | Structural accessibility checks pass in the running container | Pass | `container-browser-validation-results.txt` |
+| DP-01 | NFR-05, NFR-07 | Deployment | Image builds, becomes healthy, returns HTTP 200 and required headers | Pass | `docker-deployment-security-results.md` |
+| SEC-01 | NFR-05 | Security | Final image scan reports no vulnerable packages | Pass at scan time | `docker-deployment-security-results.md` |
 
 The acceptance cases evaluate the prototype against documented requirements. They are not represented as independent user acceptance testing by organizational target users.

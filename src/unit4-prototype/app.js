@@ -9,10 +9,15 @@
 
   function showPanel(panelId) {
     document.querySelectorAll(".feature-panel").forEach((panel) => {
-      panel.classList.toggle("active", panel.id === panelId);
+      const isActive = panel.id === panelId;
+      panel.classList.toggle("active", isActive);
+      panel.hidden = !isActive;
     });
     document.querySelectorAll(".nav-button").forEach((button) => {
-      button.classList.toggle("active", button.dataset.panel === panelId);
+      const isActive = button.dataset.panel === panelId;
+      button.classList.toggle("active", isActive);
+      button.setAttribute("aria-selected", String(isActive));
+      button.tabIndex = isActive ? 0 : -1;
     });
   }
 
@@ -67,6 +72,27 @@
 
   document.querySelectorAll(".nav-button").forEach((button) => {
     button.addEventListener("click", () => showPanel(button.dataset.panel));
+    button.addEventListener("keydown", (event) => {
+      const tabs = [...document.querySelectorAll('.nav-button[role="tab"]')];
+      const currentIndex = tabs.indexOf(button);
+      let nextIndex = currentIndex;
+
+      if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+        nextIndex = (currentIndex + 1) % tabs.length;
+      } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+        nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+      } else if (event.key === "Home") {
+        nextIndex = 0;
+      } else if (event.key === "End") {
+        nextIndex = tabs.length - 1;
+      } else {
+        return;
+      }
+
+      event.preventDefault();
+      showPanel(tabs[nextIndex].dataset.panel);
+      tabs[nextIndex].focus();
+    });
   });
 
   document.getElementById("access-form").addEventListener("submit", evaluateAccess);

@@ -1,0 +1,21 @@
+UNIT 7 RESUBMISSION AUTOMATED VALIDATION
+
+Policy regression tests: 16 passed, 0 failed
+Additional validation checks: 8 passed, 0 failed
+Combined automated result: 24 passed, 0 failed
+
+PASS RV-01 Reject invalid non-object policy input
+PASS RV-02 Pin the remediated Nginx image and apply the zlib upgrade
+PASS RV-03 Declare the container health check
+PASS RV-04 Declare the required response security headers
+PASS RV-05 Declare a restrictive Content Security Policy
+PASS RV-06 Include document language and viewport metadata
+PASS RV-07 Connect each tab to an accessible panel
+PASS RV-08 Label the decision log with a table caption
+
+core-logic.js coverage
+Lines: 100.00%
+Branches: 96.97%
+Functions: 100.00%
+
+Boundary: These tests validate local policy behavior and repository configuration. They do not validate live vendor services, a production tenant, production devices, or representative users.

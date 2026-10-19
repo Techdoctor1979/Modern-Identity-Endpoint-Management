@@ -1,0 +1,21 @@
+UNIT 7 CONTAINER BROWSER VALIDATION
+
+Recorded milestone environment: Google Chrome headless against the local Nginx container
+Inputs: Synthetic nonproduction values
+
+PASS A11Y-01 Document language metadata
+PASS A11Y-02 Labeled tab navigation
+PASS A11Y-03 Tabs reference existing panels
+PASS A11Y-04 Panels reference their tab labels
+PASS A11Y-05 Result regions announce updates
+PASS A11Y-06 Decision log has a caption
+PASS A11Y-07 Notice identifies synthetic nonproduction data
+
+Accessibility result: 7 of 7 passed
+
+Identity access: 200 samples | p50 0.500 ms | p95 0.800 ms | p99 1.100 ms | maximum 2.400 ms
+Endpoint compliance: 200 samples | p50 0.500 ms | p95 0.800 ms | p99 1.000 ms | maximum 1.000 ms
+
+Boundary: The measurement covers a local Chrome DevTools round trip, browser form submission, policy decision, and result rendering after the page was loaded from the running Nginx container. It excludes authentication, external network calls, vendor services, backend processing, database storage, persistent audit writes, and concurrent users. Values vary across computers and repeated runs.
+
+The accessibility checks are structural. They do not replace manual keyboard, screen-reader, contrast, zoom, or representative-user evaluation.

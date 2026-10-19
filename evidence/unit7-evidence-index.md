@@ -11,7 +11,10 @@
 | `unit-test-results.txt` | Records the 16-test regression run and coverage summary. |
 | `system-test-matrix.md` | Connects each system, integration, and acceptance case to its requirement and result. |
 | `performance-regression-summary.md` | Compares the Unit 7 local rerun with the Unit 6 development baseline and states the measurement boundary. |
+| `automated-validation-results.txt` | Records all 24 passing policy, input, deployment, header, and structural checks with core-logic coverage. |
+| `container-browser-validation-results.txt` | Records seven structural accessibility passes and the 200-sample identity and compliance milestone timings. |
+| `docker-deployment-security-results.md` | Records the image build, health, HTTP response, security headers, initial findings, remediation, and clean final scan. |
 
-The matching executable browser suite is `src/unit4-prototype/tests/system-tests.js`. The maintenance strategy, schedule, risks, and production-readiness gates are documented in `docs/unit7-system-testing-maintenance.md`.
+The matching executable suites are `src/unit4-prototype/tests/system-tests.js`, `src/unit4-prototype/tests/resubmission-validation.test.js`, and `src/unit4-prototype/scripts/container-browser-validation.js`. The maintenance strategy, schedule, risks, and production-readiness gates are documented in `docs/unit7-system-testing-maintenance.md`. The executed container procedure is documented in `src/unit4-prototype/deployment/DEPLOYMENT.md`.
 
 All inputs are synthetic. The evidence contains no credentials, access tokens, tenant identifiers, personal information, device serial numbers, production exports, or private network details.

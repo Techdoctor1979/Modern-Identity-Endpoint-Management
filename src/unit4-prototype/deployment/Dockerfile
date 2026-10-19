@@ -1,4 +1,9 @@
-FROM nginx:1.27-alpine
+FROM nginx:1.30.6-alpine3.24-slim
+
+# Apply the current Alpine security update for the package that remained in the
+# first remediated image scan. Rebuild and rescan periodically because package
+# and vulnerability data change after this milestone.
+RUN apk upgrade --no-cache zlib
 
 COPY index.html /usr/share/nginx/html/index.html
 COPY styles.css /usr/share/nginx/html/styles.css
