@@ -12,4 +12,7 @@ raw-evidence/
 production-exports/
 *.docx
 *.pdf
+*.pptx
+*.mp4
+*.zip
 ~$*
