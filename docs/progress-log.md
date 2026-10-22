@@ -38,6 +38,12 @@ The Unit 7 package also adds corrective, adaptive, perfective, and preventive ma
 
 On October 19, 2026, I obtained qualitative follow-up feedback from three employees who had participated in earlier prototype testing: a receptionist representing a nontechnical end user, a Level 1 Help Desk technician, and a systems administrator. The receptionist needed additional explanation of identity-access and endpoint-compliance terminology. I added plain-language definitions, everyday-language decision explanations, specific corrective steps for failed device-security conditions, and a visible notice that the decision log is temporary. Ten of ten resubmission validation checks now pass, bringing the combined automated result to 26 of 26. The employees formed a small internal convenience sample. The follow-up did not use a new numerical rating protocol, so I did not calculate a new usability score.
 
+## Assignment Activity Unit 8
+
+I prepared the completed prototype, design documentation, and sanitized evidence as a public-safe final portfolio. The portfolio summary connects the problem, architecture, working prototype, test results, user feedback, known limitations, and production-readiness requirements without publishing the formal course submissions or student identifier.
+
+The final portfolio release does not change the established policy behavior. A fresh local verification completed 26 of 26 automated checks with 100 percent executable-line and function coverage and 96.97 percent branch coverage. The system suite again produced seven passes and the documented AT-03 refresh-persistence limitation. The recorded presentation is hosted through a public ScreenPal link; the MP4 remains outside the repository.
+
 ## Current limitations
 
 Available licenses, representative devices, permissions, and Apple enrollment services may limit testing. Any unsupported test will be recorded as `Not tested` with the reason. Repository evidence must remain anonymized and free of credentials, production data, and unnecessary personal information. Later testing should add the remaining branch case, persistent audit storage, manual accessibility review, structured task-based representative-user evaluation with a larger group, end-to-end timing, and authorized platform evidence where access permits.
